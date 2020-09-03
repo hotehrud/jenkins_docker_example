@@ -2,6 +2,10 @@
 - Mac
 - Docker
 
+#### 젠킨스 플러그인 추가 설치
+- Pipeline Utility Steps => zip 명령어 사용(Jenkinsfile)
+- 변수 BUILD_TIMESTAMP 사용 => (https://stackoverflow.com/questions/24226862/how-to-get-build-time-stamp-from-jenkins-build-variables)
+
 #### Dockerfile
 - jenkins:lts 이미지 pull
 - aws-cli 설치
