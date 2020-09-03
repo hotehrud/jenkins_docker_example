@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    image: mygumi/jenkins:latest
+    volumes:
+      - ~/jenkins:/var/jenkins_home
+      - ~/.aws:/root/.aws
+      - ~/.docker:/root/.docker
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+  nginx:
+    image: mygumi/jenkins_nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - app
+    restart: always
